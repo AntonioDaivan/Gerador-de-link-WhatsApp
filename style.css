@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
+.body{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    
+    font-family: 'Open Sans', sans-serif;
+
+    overflow-x: hidden;
+}
+
+header{
+    background-color: rgb(9, 114, 0);
+    padding: 10px;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.numero{
+    height: 30px;
+    text-align: center;
+}
+
+.tela{
+    height: 30px;
+    text-align: center;
+}
+
+.mensagem{
+    height: 30px;
+    text-align: center;
+
+}
+
+.btn{
+    margin-top: 25px;
+}
+
+.cx-tela, .cx-numero, .cx-mensagem{
+    margin: 30px;
+}
+
+.tela-qr{
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+footer{
+    height: 52px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a{
+    color: white;
+}
