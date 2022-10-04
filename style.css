@@ -1,63 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --clr-principal: #128C7E;
+    --clr-white: #fff;
+    --box-shadow: 15px 15px 35px #c0c0c0;
+    --bg-clr: #fdfdfd;
+    --clr-btn: #086F64;
+}
 
 .body{
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
-    text-align: center;
-    
-    font-family: 'Open Sans', sans-serif;
-
+    display: grid;
     overflow-x: hidden;
+    grid-template-columns: repeat(no-repeat);
+    grid-template-rows: repeat(3, 15vh 75vh 10vh);
+    background-color: var(--bg-clr);
 }
 
-header{
-    background-color: rgb(9, 114, 0);
+header.header{
+    background-color:var(--clr-principal);
     padding: 10px;
-    color: white;
-    margin-bottom: 14px;
-}
-
-.numero{
-    height: 30px;
+    color: var(--clr-white);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.tela{
-    height: 30px;
-    text-align: center;
+main.content{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.mensagem{
-    height: 30px;
-    text-align: center;
-
+section.box-qr,
+section.form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 80%;
+    justify-content: space-evenly;
+    box-shadow: var(--box-shadow);
+    padding: 15px 20px;
+    border-radius: 30px;
 }
 
-.btn{
-    margin-top: 25px;
+div.box-contents{
+    display: flex;
+    flex-direction: column;
 }
 
-.cx-tela, .cx-numero, .cx-mensagem{
-    margin: 30px;
+div.box-buttons-link{
+    display: flex;
+    column-gap: 10px;
+    margin: 15px;
 }
 
-.tela-qr{
-    width: 250px;
-    height: 250px;
-    margin-top: 50px;
+button.btn{
+    width: 150px;
+    height: 40px;
+    align-self: center;
+    border: none;
+    border-radius: 8px;
 }
 
-footer{
-    height: 52px;
-    margin-top: 30px;
-    background-color: black;
-    color: white;
-
+button.btn-copy{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--clr-principal);
 }
 
-footer a{
-    color: white;
+button.btn-qrcode,
+button.btn-link{
+    background-color:var(--clr-btn);
+    color: var(--clr-white);
+}
+
+input.input-form{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+}
+
+input.input-form:focus{
+    outline: solid 1px #c0c0c0;
+}
+
+.tela-link{
+    border: none;
+    height: 30px;
+}
+
+.cx-qr{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tela-qr{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+footer.footer{
+    width: 100%;
+    height: 100%;
+    background-color: #888;
+    display: grid;
+    place-items: center;
+}
+
+footer.footer p a{
+    color: black;
 }
