@@ -71,6 +71,7 @@ button.btn{
     align-self: center;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 button.btn-copy{
