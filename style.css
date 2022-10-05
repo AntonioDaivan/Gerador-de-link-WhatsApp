@@ -128,3 +128,28 @@ footer.footer{
 footer.footer p a{
     color: black;
 }
+
+@media (max-width: 760px) {
+    header.header{
+        flex-wrap: wrap;
+    }
+    main.content{
+        flex-direction: column;
+        padding: 30px;
+        row-gap: 30px;
+    }
+
+    section.form,
+    section.box-qr{
+        width: 90%;
+        row-gap: 5px;
+    }
+
+    section.box-qr{
+        align-items: center;
+    }
+
+    input.input-form{
+        width: 100% ;
+    }
+}
