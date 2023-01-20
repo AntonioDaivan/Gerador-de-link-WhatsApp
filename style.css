@@ -10,18 +10,20 @@
 :root{
     --clr-principal: #128C7E;
     --clr-white: #fff;
-    --box-shadow: 15px 15px 35px #c0c0c0;
-    --bg-clr: #fdfdfd;
+    --box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    --box-shadow-inset: inset 20px 20px 60px #bebebe,
+                        inset -20px -20px 60px #ffffff;
+    --bg-clr: #e0e0e0;
     --clr-btn: #086F64;
 }
 
 .body{
-    height: 90vh;
-    width: 100vw;
+    width: 100%;
     display: grid;
     overflow-x: hidden;
-    grid-template-columns: repeat(no-repeat);
-    grid-template-rows: repeat(3, 15vh 75vh 10vh);
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 75vh 10vh;
     background-color: var(--bg-clr);
 }
 
@@ -49,9 +51,10 @@ section.form{
     align-self: center;
     height: 80%;
     justify-content: space-evenly;
+    background: var(--bg-clr);
     box-shadow: var(--box-shadow);
     padding: 15px 20px;
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 div.box-contents{
@@ -88,11 +91,12 @@ button.btn-link{
 }
 
 input.input-form{
-    width: 300px;
+    width: 100%;
     height: 30px;
     border-radius: 5px;
     border: none;
     padding: 0 10px;
+    box-shadow: var(--box-shadow-inset);
 }
 
 input.input-form:focus{
@@ -120,7 +124,6 @@ input.input-form:focus{
 footer.footer{
     width: 100%;
     height: 100%;
-    background-color: #888;
     display: grid;
     place-items: center;
 }
@@ -130,6 +133,10 @@ footer.footer p a{
 }
 
 @media (max-width: 760px) {
+    body.body{
+        grid-template-rows: 15vh 1fr 5vh;
+    }
+
     header.header{
         flex-wrap: wrap;
     }
@@ -137,6 +144,7 @@ footer.footer p a{
         flex-direction: column;
         padding: 30px;
         row-gap: 30px;
+        overflow: auto;
     }
 
     section.form,
