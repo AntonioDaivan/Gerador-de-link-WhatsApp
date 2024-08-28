@@ -18,9 +18,8 @@ function gerarLink() {
 }
 
 function copiarLink() {
-    let link = document.querySelector(".tela-link")
-    link.select();
-    document.execCommand("copy")
+    let link = document.querySelector(".tela-link").value
+    navigator.clipboard.writeText(link)
 }
 
 function gerarQR() {
@@ -30,8 +29,8 @@ function gerarQR() {
     if (!tela.value) {
         alert("Gere um link primeiro.")
     } else {
-        let link = tela.value
-        let googleAPI = "https://chart.googleapis.com/chart?cht=qr&chs=300x300&chld=M&chl="
+        let link = tela.value.replaceAll(' ', '%20')
+        let googleAPI = "https://quickchart.io/qr?text="
         let linkQr = googleAPI + encodeURIComponent(link)
         telaQr.style.visibility = 'visible'
         telaQr.src = linkQr
